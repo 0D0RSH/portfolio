@@ -9,7 +9,8 @@ function App() {
       <Projects/>
       <Achievements/>
       <Skills/>
-      <Footer/>
+      <Contact/>
+      <Footer/>     
     </div>
   )
 }
@@ -30,28 +31,67 @@ function Header()
 
 function About()
 {
+  const aboutData=[
+    {key:"Introduction",value:"CS Engineering graduate building real-world software-from offline-first Android apps to full-stack platforms."},
+    {key:"FieldOfInterest", value:"Full-stack web development, Backend Creation, Android Apps, research,data analysis and Networking"},
+    {key:"Hobbies",value:"Coding,Sports,gym & fitness,reading books"},
+    {key:"Ambition",value:"Grow as full-stack engineer:pursue Master's abroad in Germany"},
+    {key:"Education",value:"B.Tech CSE,MES College of Engineering,Kuttippuram-CGPA 8.02 (2026)"},
+    {key:"Languages",value:"English,Malayalam,Hindi"},
+    {key:"CountriesVisited",value:"India,Bahrain,UAE"},
+  ]
 return(
   <section id="about">
-    <p>
-      Computer Science Engineering graduate passionate about web development and 
-      application design.Building real-world projects in healthcare tech 
-      and navigation systems.
-       </p>
+   <h2>About Me</h2>
+   <div className="terminal">
+    <div className="terminal-header">
+      <span className="dot red"></span>
+      <span className="dot yellow"></span>
+      <span className="dot green"></span>
+    </div>
+    <div className="terminal-body">
+      {aboutData.map((item,i)=>(
+        <div className="code-line" key={i}>
+          <span className="code-key">"{item.key}"</span>
+          <span className="code-punct">:</span>
+          <span className="code-value">"{item.value}"</span>
+          {i<aboutData.length-1 && <span className="code-punct">,</span>}
+    </div>
+      ))}
+   </div>
+   </div>
   <div className="links">
     <a href="https://github.com/0D0RSH" target='_blank'>Github</a>
     <a href="https://www.linkedin.com/in/adarsh-satheesan-8a160b2a1" target="_blank">LinkedIn</a>
-
-  </div>
+</div>
   </section>
 )
+}
+
+function Contact()
+{
+  return(
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Open to Internships and full-time roles in web development and UI/UX Design.
+        Feel free to reach out -happy to talk!
+      </p>
+      <div className="links">
+        <a href="mailto:adarshsatheesan04@gmail.com">Email Me</a>
+        <a href="tel:+918590674757">+91 8590674757</a>
+        <a href="https://www.instagram.com/adarshsatheesan04" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </section>
+  )
 }
 function Skills()
 {
   const skillGroups=[
     
-      {category:"Languages",items:["Python","Java","Kotlin","HTML","CSS"]},
-      {category:"Frameworks & Libraries",items:["Android SDK","MVVM","Firebase","Room DB","Express.js"]},
-      {category:"Databases",items:["MongoDB","Firebase Firestore","Realtime Database"]},
+      {category:"Languages",items:["Python","Java","Kotlin","HTML","CSS","Javascript","React",]},
+      {category:"Frameworks & Libraries",items:["Android SDK","MVVM","Firebase","Room DB","Express.js","Node.js"]},
+      {category:"Databases",items:["MongoDB","Firebase Firestore","Realtime Database","SQL"]},
       {category:"Tools",items:["Git","GitHub","Android Studio","VS Code","Postman"]}
   ]                                                                   
   return (<section id="skills"><h2>Skills</h2>
