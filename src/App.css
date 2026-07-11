@@ -14,16 +14,8 @@
 * {
   box-sizing: border-box;
 }
-#root {
-  text-align: center;
-  box-sizing: border-box;
-  flex-direction: column;
-  width: 1126px;
-  max-width: 100%;
-  min-height: 100svh;
-  display: flex;
-  margin: 0px auto;
-}
+
+
 body {
   margin: 0;
   font-family: 'Inter', 'Segoe UI', sans-serif;
