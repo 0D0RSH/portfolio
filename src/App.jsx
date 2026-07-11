@@ -159,7 +159,7 @@ function Projects() {
       points: [
         "Designed a grid-based indoor navigation system with no GPS dependency",
         "Implemented pathfinding algorithms for accurate indoor routing",
-        "Global Nominee & People's Choice Award — NASA Space Apps Challenge 2024"
+        "Accurate distance and location tracking system implemented"
       ],
       github: "https://github.com/0D0RSH/GridCodeNavigator.git"
     }
@@ -190,14 +190,63 @@ function Projects() {
 }
 
 function Skills() {
-  const skillGroups = [
-    { category: "Frontend", items: ["React", "JavaScript", "HTML", "CSS", "Vite"] },
-    { category: "Backend", items: ["Node.js", "Express.js", "REST APIs"] },
-    { category: "Mobile", items: ["Kotlin", "Android SDK", "MVVM Architecture"] },
-    { category: "Databases", items: ["MongoDB", "Firebase Firestore", "Room Database", "SQL"] },
-    { category: "Languages", items: ["Python", "Java", "Kotlin", "JavaScript"] },
-    { category: "Tools", items: ["Git", "GitHub", "Android Studio", "VS Code", "Postman"] }
+ const skillGroups = [
+    {
+      category: "Frontend",
+      items: [
+        { name: "React", level: 80 },
+        { name: "JavaScript", level: 75 },
+        { name: "HTML", level: 85 },
+        { name: "CSS", level: 85 },
+        { name: "Vite", level: 70 }
+      ]
+    },
+    {
+      category: "Backend",
+      items: [
+        { name: "Node.js", level: 65 },
+        { name: "Express.js", level: 65 },
+        { name: "REST APIs", level: 70 }
+      ]
+    },
+    {
+      category: "Mobile",
+      items: [
+        { name: "Kotlin", level: 80 },
+        { name: "Android SDK", level: 75 },
+        { name: "MVVM Architecture", level: 70 }
+      ]
+    },
+    {
+      category: "Databases",
+      items: [
+        { name: "MongoDB", level: 70 },
+        { name: "Firebase Firestore", level: 80 },
+        { name: "Room Database", level: 75 },
+        { name: "SQL", level: 65 }
+      ]
+    },
+    {
+      category: "Languages",
+      items: [
+        { name: "Python", level: 65 },
+        { name: "Java", level: 60 },
+        { name: "Kotlin", level: 50 },
+        { name: "JavaScript", level: 80 }
+      ]
+    },
+    {
+      category: "Tools",
+      items: [
+        { name: "Git", level: 80 },
+        { name: "GitHub", level: 80 },
+        { name: "Android Studio", level: 75 },
+        { name: "VS Code", level: 85 },
+        { name: "Postman", level: 70 }
+      ]
+    }
   ]
+
 
   return (
     <motion.section id="skills"
@@ -210,12 +259,17 @@ function Skills() {
         {skillGroups.map((group, i) => (
           <div key={i} className="skill-group">
             <h4>{group.category}</h4>
-            <div className="skill-tags">
               {group.items.map((item, j) => (
-                <span key={j} className="skill-tag">{item}</span>
+                <div className="skill-bar-row" key={j}>
+                 <div className="skill-bar-label">
+                  <span>{item.name}</span>
+                 </div>
+                 <div className="skill-bar-track">
+                  <div className="skill-bar-fill" style={{width:`${item.level}%`}}></div>
+                 </div>
+                 </div>
               ))}
             </div>
-          </div>
         ))}
       </div>
     </motion.section>
