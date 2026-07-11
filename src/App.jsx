@@ -53,7 +53,7 @@ function InfoBar() {
           </div>
         ))}
       </div>
-      <a href="C:\Users\User\codebase\portfolio\public\Items\Adarsh Resume .pdf" download className="cv-button">Download CV ↓</a>
+      <a href="/resume.pdf" download="Adarsh_Satheesan_Resume.pdf" className="cv-button">Download CV ↓</a>
     </div>
   )
 }
