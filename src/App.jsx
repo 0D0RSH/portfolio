@@ -22,7 +22,7 @@ function Header() {
   return(
     <header>
       <div className="photo-wrapper">
-      <img src="public\images\Profile.jpeg" alt="Adarsh Satheesan" className="profile-photo" />
+      <img src="/images/Profile.jpeg" alt="Adarsh Satheesan" className="profile-photo" />
       </div>
       <h1>Adarsh Satheesan</h1>
       <p className="tagline">Full-Stack Developer & Android App Builder</p>
